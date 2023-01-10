@@ -4,7 +4,9 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const flightSchema = new Schema ({
-  airline: String,
+  airline: {
+    type: String,
+  },
   airport: String,
   flightNo: Number,
   departs: Date,
@@ -13,7 +15,7 @@ const flightSchema = new Schema ({
 }
 )
 
-const Flight = mongoose.model('Flight', movieSchema)
+const Flight = mongoose.model('Flight', flightSchema)
 
 export {
   Flight
