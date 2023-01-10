@@ -3,8 +3,15 @@
   <nav>
 		<i class="flights"></i>
     <a 
-      href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>
-    >
+    href="/flights/new" 
+    <%- title === 'Add Flights' ? 'class="active"' : '' %>
+  >
       ADD FLIGHT
     </a>
+    <a 
+    href="/flights" 
+    <%- title === 'All Flights' ? 'class="active"' : '' %>
+  >
+    ALL FLIGHTS
+  </a>
   </nav>

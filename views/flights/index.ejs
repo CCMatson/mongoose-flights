@@ -1,0 +1,29 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/movies/index.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Flight Tracker</h1>
+  <table>
+    <thead>
+      <!-- <tr>
+        <th>Title</th>
+        <th>Release Year</th>
+        <th>Rating</th>
+        <th>Cast</th>
+        <th>Now Showing</th>
+      </tr> -->
+    </thead>
+    <tbody>
+      <%# Oh hey, this is an ejs comment! It starts with a # %>
+      <%# Write the line of EJS to iterate over movies using forEach %>
+      <% flights.forEach(flight => { %>
+        <tr>The airline is <%= flight.airline %></td>
+          <td>The airport is <%= flight.airport %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>
