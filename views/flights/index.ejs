@@ -17,10 +17,17 @@
     <tbody>
       <%# Oh hey, this is an ejs comment! It starts with a # %>
       <%# Write the line of EJS to iterate over movies using forEach %>
-      <% flights.forEach(flight => { %>
-        <tr>* The airline is <%= flight.airline %></td>
-          <td>* The airport is <%= flight.airport %></td>
-        </tr>
+      <% flights.forEach(function(flight) { %>
+        <li>
+          <form 
+            action="/flights/<%= flight._id %>?_method=DELETE"
+            class="delete-form"
+            method="POST"
+          >
+
+            <button type="submit">X</button>
+          </form>
+          <a href="/flights/<%= flight._id %>"><%= flight.airline %></a> 
         <% }) %>
     </tbody>
   </table>

@@ -1,0 +1,19 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/movies/new.css" />
+<%- include('../partials/nav') %>
+
+<%- include("../partials/footer") %>
+
+
+<body>
+  <h1>Flight information</h1>
+  <h2>Flight ID #<%= flight._id %></h2>
+  <h3>The departure airport is <%= flight.airport %> </h3>
+  <h3>The airlines is <%= flight.airline %></h3>
+  <h3>The flight # is <%= flight.flightNo %></h3>
+  <h3>The date of departure is <%= flight.departs %></h3>
+  
+  <a href="/flights">Go Back</a>
+</body>
+
+<%- include('../partials/footer') %>

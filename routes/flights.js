@@ -5,8 +5,10 @@ const router = Router()
 
 /* GET users listing. */
 router.get('/', flightsCtrl.index)
-router.post('/', flightsCtrl.create)
+router.get('/:id', flightsCtrl.show)
 router.get('/new', flightsCtrl.new)
+router.post('/', flightsCtrl.create)
+router.delete('/:id', flightsCtrl.delete)
 
 export {
   router

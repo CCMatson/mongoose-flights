@@ -7,8 +7,15 @@ a {
   color: #00B7FF;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: red;
+}
+	
+li {
+  list-style: none;
 }
