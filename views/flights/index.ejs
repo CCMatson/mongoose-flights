@@ -23,11 +23,15 @@
             action="/flights/<%= flight._id %>?_method=DELETE"
             class="delete-form"
             method="POST"
-          >
-
+            >
             <button type="submit">X</button>
+              <a href="/flights/<%= flight._id %>">
+              Airline is <%= flight.airline %> ,
+              Airport is <%= flight.airport %> ,
+              Flight Number is <%= flight.flightNo %> ,
+              Departure time is <%= flight.departs %> 
+            </a> 
           </form>
-          <a href="/flights/<%= flight._id %>"><%= flight.airline %></a> 
         <% }) %>
     </tbody>
   </table>
