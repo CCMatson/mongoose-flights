@@ -1,19 +1,17 @@
 <%- include('../partials/html-head') %>
-
-<link rel="stylesheet" href="/stylesheets/movies/new.css">
+<link rel="stylesheet" href="/stylesheets/movies/new.css" />
 <%- include('../partials/nav') %>
+
+<%- include("../partials/footer") %>
 
 <main>
   <h1><%= title %></h1>
-
   <form id="new-form" action="/flights" method="POST">
     <label for="airline-input">Airline:</label>
     <input type="text" name="airline" id="airline-input">
     <label for="airport-input">Airport:</label>
-    <input type="text" name="releaseYear" id="airport-input">
-    </select>
-    <!-- the label for and the input id should match to create a label -->
-    <button type="submit">Add Flight</button>
+    <input type="text" name="airport" id="airline-input">
+    <button type="submit">Add Airline</button>
   </form>
 </main>
 
