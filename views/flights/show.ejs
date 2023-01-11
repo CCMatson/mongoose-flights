@@ -2,11 +2,14 @@
 <link rel="stylesheet" href="/stylesheets/movies/new.css" />
 <%- include('../partials/nav') %>
 
-<%- include("../partials/footer") %>
-
 
 <body>
   <h1>Flight information</h1>
+  <div>
+    <a href="/flights/<%= flight._id %>/edit">
+    <button>Edit this flight</button>
+    </a> 
+  </div>
   <h2>Flight ID #<%= flight._id %></h2>
   <h3>The departure airport is <%= flight.airport %> </h3>
   <h3>The airlines is <%= flight.airline %></h3>
