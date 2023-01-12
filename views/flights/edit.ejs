@@ -15,10 +15,9 @@
     <input type="text" value="<%= flight.airport %>" name="airport" id="airport-input">
     
     <label for="flightNo-input">Flight #:</label>
-    <input type="number" value="<%= flight.flightNo %>" name="flightNo" id="flightNo-input">
+    <input type="number" name="flightNo" autocomplete="off" value="<%= flight.flightNo %>" name="flightNo" id="flightNo-input">
 
     <label for="departs-input">Date of departure</label>
-
     <input type="text" value="<%= flight.departs %>" name="departs" id="departs-input">
 
     <button type="submit">Update Flight Information</button>
