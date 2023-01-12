@@ -28,38 +28,27 @@ form * {
 }
 
 section {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: auto auto;
+  grid-gap: 16px; */
 }
 
-section div:nth-child(even) {
+/* section div:nth-child(even) {
   font-weight: bold;
-}
+} */
 
-#add-meal-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 16px;
-  margin-bottom: 20px;
+#add-movie-form {
+  display: flex;
+  justify-content: center;
 }
-
-#add-meal-form > textarea {
-  width: 250px;
-}
-
-#add-meal-form > button {
-  font-size: 16px;
-  width: 160px;
-  grid-column: 2 / 3;
-  margin-bottom: 24px;
-}
-
 #add-ticket-form {
-  display: grid;
+  display: flex;
+  justify-content: flex-start;
+  /* display: grid;
   grid-template-columns: auto auto;
   grid-gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
 }
 
 #add-ticket-form > textarea {
@@ -69,6 +58,5 @@ section div:nth-child(even) {
 #add-ticket-form > button {
   font-size: 16px;
   width: 160px;
-  grid-column: 2 / 3;
-  margin-bottom: 24px;
+
 }
