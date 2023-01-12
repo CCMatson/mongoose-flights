@@ -18,10 +18,11 @@ function index(req, res) {
 function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
+    console.log(req.body)
   }
   Flight.create(req.body)
     .then(flight => {
-      res.redirect(`/flights/${movie._id}`)
+      res.redirect(`/flights/${flight._id}`)
     })
     .catch(err => {
       console.log(err)
@@ -85,6 +86,8 @@ function update(req, res) {
   }
   Flight.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then(flight => {
+      console.log(req.params.id)
+      console.log(req.body)
       res.redirect(`/flights/${flight._id}`)
     })
     .catch(err => {
@@ -113,6 +116,27 @@ function createTicket(req, res) {
     })
 }
 
+function addToMeals(req, res) {
+Flight.findById(req.params.id)
+.then(flight => {
+  console.log(req.params.id)
+  console.log(req.body)
+  flight.meal.push(req.body.menuId)
+  flight.save()
+  .then(()=> {
+    res.redirect(`/flights${flight._id}`)
+  })
+  .catch(err => {
+    console.log(err);
+    res.redirect("/flights")
+  })
+})
+.catch(err => {
+  console.log(err);
+  res.redirect("/flights")
+})
+}
+
 export {
   newFlight as new,
   create,
@@ -122,4 +146,5 @@ export {
   edit,
   update,
   createTicket,
+  addToMeals
 }

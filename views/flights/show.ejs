@@ -25,9 +25,7 @@
     <% }) %>
   </ul>
   </section>
-  
-  <%# add to cast form below this comment %>
-  <form id="add-choice-to-meals" action="/flights/<%= flight._id %>" method="POST">
+  <form id="add-meal-form" action="/flights/<%= flight._id %>/menu" method="POST">
   <select name="menuId">
   <% meals.forEach(meal => { %>
   <option value="<%= meal._id %>"><%= meal.name %></option>
