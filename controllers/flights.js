@@ -121,10 +121,10 @@ Flight.findById(req.params.id)
 .then(flight => {
   console.log(req.params.id)
   console.log(req.body)
-  flight.meal.push(req.body.menuId)
+  flight.menu.push(req.body.menuId)
   flight.save()
   .then(()=> {
-    res.redirect(`/flights${flight._id}`)
+    res.redirect(`/flights/${flight._id}`)
   })
   .catch(err => {
     console.log(err);
